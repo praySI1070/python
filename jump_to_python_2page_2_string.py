@@ -77,3 +77,59 @@ print("I ate {number} apples. so I was sick for {day} days.".format(number=10,da
 print("{0:<10}".format("hi")) #왼쪽정렬
 print("{0:>10}".format("hi")) #오른쪽정렬
 print("{0:^10}".format("hi")) #중앙정렬
+#공백 채우기
+print("{0:=^10}".format("hi")) #정렬 문자 앞에 글자를 채워넣으면 그 글자로 공백을 매꿈
+print("{0:s<10}".format("hi"))
+#소수점 표현하기
+y = 0.123456789
+print("{0:0.5f}".format(y))
+print("{0:10.6f}".format(y)) #총 10자리에서 6자리표현
+#{문자} 표현하기
+print("{{and}}".format())
+#f문자열 포매팅{3.6버전 이상부터 사용가능}
+name = '홍길동'
+age = 30
+print(f"나의 이름은 {name}입니다. 나이는 {age}입니다.")
+print("나의 이름은 {0}입니다. 나이는 {1}입니다.".format(name,age))
+#표현식이란 중괄호 안의 변수를 계산식과 함께 사용하는 것
+print(f"my age is {age + 1} next year.")
+#딕셔너리(key와 value를 한쌍으로 가지는 자료형)는 
+#f 문자열 포매팅에서 다음과 같이 사용가능
+d = {'name' : '홍길동', 'age' : 30}
+print(f'나의 이름은 {d["name"]}입니다. 나이는 {d["age"]}입니다.')
+#위의 문장에서 '와"는 다르게 사용되야 오류가 뜨지 않는다.
+#공백채우기
+print(f"{'hi':>10}")
+print(f"{'hi':*^10}")
+#소수점
+print(f"{y:0.4f}")
+print(f"{y:10.5f}")
+print(f"{{and}}")
+#문자열 관련 함수들
+#문자 개수 세기 - count
+a = "hobby"
+print(a.count('b')) #a에서 b가 몇개인지 세기
+#위치 알려주기 1 - find
+a = "Python is best choice"
+print(a.find('b')) #대문자 구분함 없으면 -1반환
+#위치 알려주기 2 - index
+a = "Life is too short"
+print(a.index('t')) #없는 문자를 넣으면 오류
+#find 와 index의 차이점은 find는 문자열만 사용가능하고,
+#index는 문자열 / 리스트 / 튜플은 사용가능하지만, 딕셔너리에선 사용불가
+#시작 위치와 끝 위치
+a = "oxoxoxoxoxox"
+print(a.index('o', 1, 3)) #1~3번째에서 문자 'o'가 위치한 자리
+#문자열 삽입 - join
+print(",".join('abcd')) # abcd사이에 ',' 삽입
+#소문자를 대문자로 바꾸기 - upper
+a = "hi"
+print(a.upper())
+b = a.upper()
+#대문자를 소문자로 바꾸기 - lower
+print(b.lower())
+#공백 지우기
+a = f"{'hello':^10}"
+print(a.lstrip()) #왼쪽
+print(a.rstrip()) #오른쪽
+print(a.strip()) #양쪽
