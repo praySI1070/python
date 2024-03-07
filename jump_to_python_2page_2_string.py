@@ -58,3 +58,22 @@ print("I ate %d apples. so I was sick for %s days." % (3,'five'))
 # %x 16진수
 # %% 문자 % 자체
 #포맷 코드와 숫자 함꼐 사용하기
+#정렬과 공백
+print("%10s" % "Hi") #10칸 공백 중 뒤쪽부터 글자 채우기 12345678HI
+print("%-10sJANE" % "HI")  # HI12345678JANE
+#소수점 표현하기
+print("%0.4f" % 3.12345678) #소수점 4번쨰 자리까지 표현 - 5번쨰 자리에서 반올림
+#format 함수를 사용한 포매팅
+print("I eat {0} apples".format(3))
+print("I eat {0} apples".format("five"))
+#2개 이상의 값 넣기
+#인덱스는 0부터 순서대로
+number = 10
+day = "three"
+print("I ate {0} apples. so I was sick for {1} days. {2}".format(number,day,"finish"))
+#이름으로 넣기
+print("I ate {number} apples. so I was sick for {day} days.".format(number=10,day=3))
+#정렬
+print("{0:<10}".format("hi")) #왼쪽정렬
+print("{0:>10}".format("hi")) #오른쪽정렬
+print("{0:^10}".format("hi")) #중앙정렬
