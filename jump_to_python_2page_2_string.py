@@ -133,3 +133,11 @@ a = f"{'hello':^10}"
 print(a.lstrip()) #왼쪽
 print(a.rstrip()) #오른쪽
 print(a.strip()) #양쪽
+#문자열 바꾸기 - replace
+a = "Life is too short"
+print(a.replace("Life", "Your leg"))
+#문자열 나누기 - split
+a = "Life is too short"
+print(a.split()) #(space) / (Tab) / (Enter)을 기준으로 문자열을 나눠줌
+b = "a:b:c:d"
+print(b.split(':')) # (:)를 기준으로 문자열을 나눠줌
