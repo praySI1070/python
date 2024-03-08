@@ -33,5 +33,59 @@ a = [1,2,3]
 print(a)
 a[2] = 4
 print(a)
-del a[1]  #삭제
+del a[1]  #삭제  #del 객채로 사용
+print(a)
+#여러개 삭제
+a = [1, 2, 3, 4, 5]
+del a[:2]
+print(a)
+#리스트 관련 함수
+#리스트에 요소 추가하기 - append
+a.append(1)
+print(a)
+a.append([6,7])
+print(a)
+#리스트의 정렬 - sort - 정렬을 해서 원래 함수에 반환
+a = [1, 4, 3, 2]
+a.sort()
+print(a)
+a = ['b', 'a', 'c']
+a.sort()
+print(a)
+#리스트 뒤집기 - reverse
+a.reverse()
+print(a)
+#인덱스 반환 - index
+a = [1, 2, 3]
+print(a.index(3)) #2번 위치
+print(a.index(1)) #0번 위치
+#리스트에 요소 삽입 - insert
+a.insert(0,4) #a 0번 자리에 4를 삽입
+print(a)
+a.insert(3, 5)
+print(a)
+#리스트 요소 제거 - remove
+#remove(x)는 리스트에서 첫번째로 나오는 x를 삭제하는 함수
+a = [1,2,3,1,2,3]
+a.remove(3)
+print(a)
+#리스트 요소 끄집어 내기 - pop
+#pop는 리스트의 맨 마지막을 반환하고 그 요소는 삭제한다.
+a = [1,2,3]
+print(a.pop())
+print(a)
+a = [1,2,3]
+print(a.pop(1)) # 1번 자리를 반환하고 삭제
+print(a)
+#리스트에 포함된 요소 x의 개수 세기 - count
+a = [1,2,3,1]
+print(a.count(1))
+#리스트의 확장 - extend
+a = [1,2,3]
+a.extend([4,5])
+print(a)
+b = [6,7]
+a.extend(b)
+print(a)
+a += [8,9]  #==a.extend([8,9])
 print(a)
