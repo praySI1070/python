@@ -32,6 +32,11 @@ print(s1.difference(s2))
 
 #집합 자료형 관련 함수
 #값 1개 추가하기 - add
-s1 = set[1,2,3]
-s1.add()   #?왜안됨
+s1 = set([1,2,3])   #소괄호 주의
+s1.add(4)   #?왜안됨 - 집합 설정이 안 되어 있었음
+print(s1)
+s1 = set([1,2,3])
+s1.update([4,5,6])
+print(s1)
+s1.remove(3)
 print(s1)
