@@ -1,4 +1,11 @@
 import random
+import pyttsx3 as py
+engine = py.init()
+engine.setproperty('rate',150)
+
+def speak(text):
+    engine.say(text)
+    engine.runAndWait()
 
 rock = '''
     _______
@@ -44,19 +51,23 @@ def me():
 def game():
     b = me()
     cp = random.randrange(0,3)
-    if(cp == '0'):
+    print("cp :" + str(cp))
+    if(cp == 0):
         print(rock)
-    elif(cp == '1'):
+    elif(cp == 1):
         print(paper)
     else:
         print(scissors)
     
     if(int(b) - int (cp) == 0):
         print("무승부")
+        speak("무승부")
     elif(int(b) - int(cp) == 1 or int(b) - int(cp) == -2):
         print("승리")
+        speak("승리")
     else:
         print("패배")
+        speak("패배")
     
     game()
 
